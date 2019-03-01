@@ -3,8 +3,8 @@ var countTotal=0;
 var result;
 var diceNumber;
 var die = {
-  
-  },
+
+  }
   roll2: function(){
     var diceNumber = Math.floor(Math.random() * this.sides) + 1;
     countTotal+=diceNumber;
