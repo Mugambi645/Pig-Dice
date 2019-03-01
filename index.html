@@ -1,10 +1,30 @@
+<html>
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="" rel="stylesheet">
-    <script src="js/jquery-1.11.2.js"></script>
+    <link href="portfolio.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
     <link href="css/styles.css" rel="stylesheet">
     <title>Pig Dice</title>
   </head>
   <body>
+
+    <div id="jumbotron">
+      <div id="container">
+        <h1>Pig Dice</h1>
+      </div>
+    </div>
+
+    <div id="container">
+      <form id="block" id="main">
+
+        <div id="col-md-4">
+          <h2 class="player1">Player1</h2>
+          <h3>Score: <span id="player1score"></span></h3>
+          <h3>Wins: <span id="player1wins"></span></h3>
+          <div id="player1buttons">
+            <button id="scroll" class="btn btn-large btn-danger">scroll dice</button>
+            <button id="touch" class="btn btn-large btn-success">touch</button>
+          </div>
+        </div>
