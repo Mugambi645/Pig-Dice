@@ -1,4 +1,4 @@
-var countTotal = 0;
+var countTotal = 100;
 
 var dieNumber;
 var output;
@@ -22,13 +22,14 @@ var die = {
   roll2: function() {
     var dieNumber = Math.floor(Math.random() * this.sides) + 1;
     countTotal += dieNumber;
-    if (dieNumber === 1) {
+  if (dieNumber > 1) {
+    $('.die').prop("disabled", false);
+    return dieNumber;
+
+  }  else if (dieNumber === 1) {
       countTotal = 0;
       $('.die').prop("disabled", true)
       $('.dice').prop("disabled", false)
-    } else if (dieNumber > 1) {
-      $('.die').prop("disabled", false);
-      return dieNumber;
 
     }
   }
