@@ -9,10 +9,10 @@ h1 {
   text-transform: capitalize;
   text-decoration-style: wavy;
 
-  padding-right: 40px;
+  padding-right: 100px;
   padding-top: 50px;
   padding-left: 40px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 body {
   margin-left: 50px;
@@ -20,5 +20,4 @@ body {
   margin-top: 50px;
   background-image: url(http://www.animatedimages.org/data/media/710/animated-dice-image-0103.gif);
   background-attachment: fixed;
-
-  
+}

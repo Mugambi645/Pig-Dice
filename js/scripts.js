@@ -1,3 +1,5 @@
+
+
 var countTotal=0;
 
 var dieNumber;
@@ -7,16 +9,18 @@ var die = {
   roll: function(){
     var dieNumber = Math.floor(Math.random() * this.sides) + 1;
     countTotal +=dieNumber;
-    if (dieNumber ===1){
-      countTotal = 0;
-      $('.dice').prop('disabled', true);
-      $('.die').prop('disabled', false);
+   if (dieNumber > 1) {
+    $('.dice').prop("disabled", false);
+    return dieNumber;
 
-    } else if (dieNumber > 1) {
-      $('.dice').prop('disabled', false);
-      return dieNumber;
+  } else if (dieNumber ===1){
+      countTotal =0;
+      $('.dice').prop("disabled", true);
+      $('.die').prop("disabled", false);
     }
   },
+
+
   roll2: function(){
     var dieNumber = Math.floor(Math.random() * this.sides) + 1;
     countTotal+=dieNumber;
@@ -32,11 +36,11 @@ var die = {
   }
 }
 
-function rollDie() {
+function rolldie() {
   var output = die.roll();
   return output;
 }
-function dieRoll2(){
+function dieroll2(){
   var output2 = die.roll2();
   return output2;
 }
@@ -68,4 +72,4 @@ $(document).ready(function(){
   });
 
 
-});
+  });
