@@ -1,41 +1,22 @@
-###PIG DICE
+# {PIG DICE}
+#### {Web application that works on the principal of probability}, {04-03-2019}
+#### By **{patrick mugambi}**
+## Description
+{This is a web app that lets two players play a dice game.The first one to reach 100 is the winner and if he/she hits 1 then they have lost.So this game works on the principality of probability and some bit of luck}
+## Setup/Installation Requirements
+* Web browser
+* Internet connection
 
+## Known Bugs
+No bugs
+## Technologies Used
+* html
+* javascript
+* jquery
+* bootstrap
+* css
 
-This is a simple program based on probability and luck that lets two players play against each other
-
-
-##By patrick mugambi
-
-
-##DESCRIPTION
-
-This project is about dices.One should roll the dice until he/she achieves 100 points or strikes 1 which is a loss and therefore the next player plays
-
-
-##SETUP REQUIREMENTS
-
-A browser
-
-Internet Connection
-
-
-##LANGUAGES USED
-
-HTML
-
-CSS
-
-JQUERY
-
-JAVASCRIPT
-
-BOOTSTRAP
-
-
-##SUPPORT AND CONTACT DETAILS
-E-mail: mugambi645@gmail.com
-
-
-##LICENCED BY
-
-MIT License Copyright (c) 2019 Patrick Mugambi
+## Support and contact details
+Email:mugambi645@gmail.com
+### License
+* MIT Copyright (c) {year} **{patrick mugambi}**
