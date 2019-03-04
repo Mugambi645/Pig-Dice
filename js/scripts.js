@@ -6,7 +6,7 @@ var output;
 var die = {
   sides: 7,
   roll: function() {
-    var dieNumber = Math.floor(Math.random() * this.sides) + 1;
+    var dieNumber = Math.floor(Math.random()*this.sides)+1;
     countTotal += dieNumber;
     if (dieNumber > 1) {
       $('.dice').prop("disabled", false);
@@ -69,11 +69,13 @@ $(document).ready(function() {
     $("#total1").text(countTotal.toString());
   });
   $(".die").click(function(event) {
+
     event.preventDefault();
 
     var result2 = die.roll2();
 
     $('#current2').text(result2);
+
     $('#total2').text(countTotal.toString());
   });
 });
