@@ -1,6 +1,7 @@
-var countTotal = 100;
-
+var countTotal = 0;
+var maximumScore =100;
 var dieNumber;
+var scoreLimit =100;
 var output;
 var die = {
   sides: 7,
@@ -48,14 +49,19 @@ function dieroll2() {
 $(document).ready(function() {
   $("#input").submit(function(event) {
     event.preventDefault();
-    var name = ($("#player1-name").val());
-    var name2 = ($("#player2-name").val());
+    var name = ($("player1-name").val());
+    var name2 = ($("player2-name").val());
 
 
     $(".play1").append(name);
     $(".play2").append(name2);
+
+
+
+
   });
   $(".dice").click(function(event) {
+
     event.preventDefault();
 
     var result = die.roll();
@@ -67,9 +73,7 @@ $(document).ready(function() {
 
     var result2 = die.roll2();
 
-    $("#current2").text(result2);
-    $("#total2").text(countTotal.toString());
+    $('#current2').text(result2);
+    $('#total2').text(countTotal.toString());
   });
-
-
 });
