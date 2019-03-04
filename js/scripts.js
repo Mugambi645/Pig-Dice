@@ -1,63 +1,71 @@
-$(document).ready(function(){
-  $("#roll dice").submit(function(event){
-    var player =($("#plyr1-name").val());
-    var player2 =($("#plyr2-name").val());
-    event.preventDefault();
-    $(".play1").append(name);
-        $(".play2").append(name2);
-  });
-  function rollDie() {
-    var result = die.roll();
-    return result;
-  }
-  function rollDie2() {
-    var result2 = die.roll2();
-    return result2;
-  }
-  $(".dice").click(function(event){
-
-    event.preventDefault();
-
-    var result = die.roll();
-    $("#cur1").text(result);
-    $("#tot1").text(countTotal.toString());
-  });
-  $(".die").click(function(event){
-    event.preventDefault();
-    var result2 = die.roll2();
-    $("#cur2").text(result2);
-    $("#tot2").text(countTotal.toString());
-  });
-
-});
 var countTotal=0;
-var result;
-var diceNumber;
+
+var dieNumber;
+var output;
 var die = {
   sides: 7,
   roll: function(){
-    var diceNumber = Math.floor(Math.random() * this.sides) + 1;
-    countTotal+=diceNumber;
-    if (diceNumber ===1){
+    var dieNumber = Math.floor(Math.random() * this.sides) + 1;
+    countTotal +=dieNumber;
+    if (dieNumber ===1){
       countTotal = 0;
-      $('.die').prop('disabled', true);
-      $('.dice').prop('disabled', false);
-
-    } else if (diceNumber > 1) {
+      $('.dice').prop('disabled', true);
       $('.die').prop('disabled', false);
-      return diceNumber;
+
+    } else if (dieNumber > 1) {
+      $('.dice').prop('disabled', false);
+      return dieNumber;
     }
   },
   roll2: function(){
-    var diceNumber = Math.floor(Math.random() * this.sides) + 1;
-    countTotal+=diceNumber;
-    if(diceNumber === 1){
+    var dieNumber = Math.floor(Math.random() * this.sides) + 1;
+    countTotal+=dieNumber;
+    if(dieNumber===1){
       countTotal = 0;
-      $('.dice').prop('disabled', true);
-    $('.die').prop('disabled', false);
-    } else if (diceNumber > 1) {
-      $('.dice').prop('disabled', false);
-      return diceNumber;
+      $('.die').prop('disabled', true)
+    $('.dice').prop('disabled', false)
+  } else if (dieNumber>1) {
+      $('.die').prop('disabled', false);
+      return dieNumber;
+
     }
   }
 }
+
+function rollDie() {
+  var output = die.roll();
+  return output;
+}
+function dieRoll2(){
+  var output2 = die.roll2();
+  return output2;
+}
+
+$(document).ready(function(){
+  $("#input").submit(function(event) {
+    event.preventDefault();
+    var name =($("#player1-name").val());
+    var name2 =($("#player2-name").val());
+
+
+    $(".play1").append(name);
+    $(".play2").append(name2);
+  });
+  $(".dice").click(function(event){
+    event.preventDefault();
+
+    var result = die.roll();
+    $("#current1").text(result);
+    $("#total1").text(countTotal.toString());
+  });
+  $(".die").click(function(event){
+    event.preventDefault();
+
+    var result2 = die.roll2();
+
+    $("#current2").text(result2);
+    $("#total2").text(countTotal.toString());
+  });
+
+
+});

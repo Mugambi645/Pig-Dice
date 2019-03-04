@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <title>PIG DICE</title>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -12,7 +13,7 @@
 <body>
   <div class="jumbotron">
 
-  <div class="container">
+    <div class="container">
 
       <h1>PIG DICE</h1>
     </div>
@@ -20,25 +21,25 @@
       <form class="roll call">
         <div id="block">
         </div>
-        <label for="plyr1">Player1 Name:</label>
-        <input type="text" id="plyr1-name">
+        <label for="player1">Player1 Name:</label>
+        <input type="text" id="player1-name">
     </div>
 
     <div class="cauliflower">
-      <label for="plyr2">Player2 Name:</label>
-      <input type="text" id="plyr2-name">
-    <button type="submit" id="btn btn-dark">Here we go!</button>
-</div>
+      <label for="Player2">Player2 Name:</label>
+      <input type="text" id="player2-name">
+      <button type="submit" id="btn btn-dark">Here we go!</button>
+    </div>
     </form>
   </div>
 
-  <div class="rslts row">
-    <div class=" colmn col-md-6">
+  <div class="output row">
+    <div class="colmn col-md-6">
       <div class="card">
         <div class="card-body">
-          <h2 class=" play1 card-title">Player 1:</h2>
-          Total score:<p id="tot1"></p>
-          Current Score:<p id="cur1"></p>
+          <h2 class=" player1 card-title">Player1:</h2>
+          Total score:<p id="total1"></p>
+          Current Score:<p id="current1"></p>
           <button type="click" class="dice btn btn-success btn-lg">Roll some dice!</button>
           <button type="button" class="dice btn btn-dark btn-lg">Hold on</button>
         </div>
@@ -48,17 +49,17 @@
     <div class="col-md-6">
       <div class="card">
         <div class="card-body">
-          <h2 class="player2 card-title">Player 2:</h2>
-          Total Score:<p id="tot2"></p>
-          Current Score:<p id="cur2"></p>
+          <h2 class="player2 card-title">Player2:</h2>
+          Total Score:<p id="total2"></p>
+          Current Score:<p id="current2"></p>
           <button type="click" class="die btn btn-success btn-lg"> Roll some dice!</button>
           <button type="button" class="die btn btn-dark btn-lg"> Hold on</button>
         </div>
       </div>
-</div>
+    </div>
   </div>
-</div>
-</div>
+  </div>
+  </div>
 </body>
 
 </html>
