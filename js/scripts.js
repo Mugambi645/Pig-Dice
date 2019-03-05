@@ -1,4 +1,5 @@
-var countTotal = 0;
+var countTotal = 21;
+var winnerScore =100;
 var maximumScore =100;
 var dieNumber;
 var scoreLimit =100;
@@ -13,7 +14,7 @@ var die = {
       return dieNumber;
 
     } else if (dieNumber === 1) {
-      countTotal = 0;
+      countTotal = 21;
       $('.dice').prop("disabled", true);
       $('.die').prop("disabled", false);
     }
@@ -28,7 +29,7 @@ var die = {
     return dieNumber;
 
   }  else if (dieNumber === 1) {
-      countTotal = 0;
+      countTotal = 21;
       $('.die').prop("disabled", true)
       $('.dice').prop("disabled", false)
 
@@ -53,8 +54,8 @@ $(document).ready(function() {
     var name2 = ($("player2-name").val());
 
 
-    $(".play1").append(name);
-    $(".play2").append(name2);
+    $(".ply1").append(name);
+    $(".ply2").append(name2);
 
 
 
