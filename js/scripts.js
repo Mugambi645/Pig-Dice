@@ -8,14 +8,17 @@ var die = {
   roll: function() {
     var dieNumber = Math.floor(Math.random()* 6)+1;
     countTotal += dieNumber;
-    if (dieNumber > 1) {
+
+     if (dieNumber > 1) {
       $('.dice').prop("disabled", false);
       return dieNumber;
+
 
     } else if (dieNumber === 1) {
       countTotal = 0;
       $('.dice').prop("disabled", true);
       $('.die').prop("disabled", false);
+
     }
   },
 
@@ -58,7 +61,6 @@ $(document).ready(function() {
 
 
 
-
   });
   $(".dice").click(function(event) {
 
@@ -77,5 +79,7 @@ $(document).ready(function() {
     $('#current2').text(result2);
 
     $('#total2').text(countTotal.toString());
+
+  
   });
 });
