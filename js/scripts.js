@@ -4,9 +4,9 @@ var dieNumber;
 var scoreLimit =100;
 var output;
 var die = {
-  sides: 7,
+  sides: 6,
   roll: function() {
-    var dieNumber = Math.floor(Math.random()*this.sides)+1;
+    var dieNumber = Math.floor(Math.random()* 6)+1;
     countTotal += dieNumber;
     if (dieNumber > 1) {
       $('.dice').prop("disabled", false);
@@ -21,7 +21,7 @@ var die = {
 
 
   roll2: function() {
-    var dieNumber = Math.floor(Math.random() * this.sides) + 1;
+    var dieNumber = Math.floor(Math.random() * 6) + 1;
     countTotal += dieNumber;
   if (dieNumber > 1) {
     $('.die').prop("disabled", false);
